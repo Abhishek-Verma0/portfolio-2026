@@ -1,10 +1,19 @@
-import  "./navbar.css";
-
+import "./navbar.css";
+import GradientText from "../GradientText";
 export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <span className="logo">Abhishek Verma</span>
+        <span className="logo">
+          <GradientText
+            colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
+            animationSpeed={8}
+            showBorder={false}
+            className="custom-class"
+          >
+            Abhishek Verma
+          </GradientText>
+        </span>
       </div>
 
       <div className="nav-right">
