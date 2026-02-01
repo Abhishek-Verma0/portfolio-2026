@@ -2,48 +2,19 @@
 
 import "./about.css"
 
-import Orb from "../Orb";
+
+
 
 import Hyperspeed from "../Hyperspeed"; 
-import TextType from "../TextType";
-import Navbar from "../navbar/Navbar";
+
+
 const About = () => {
   return (
-    <div className="about">
-        <div
-          className="orb-layer"
-          style={{ width: "100%", height: "100vh", position: "absolute" }}
-        >
-          <Orb
-            hoverIntensity={2}
-            rotateOnHover
-            hue={0}
-            forceHoverState={false}
-            backgroundColor="#000000"
-          />
-        </div>
-        <div className="content">
-          <Navbar />
-          <div className="intro-text">
-            <TextType
-              text={["Hi..!", "I'm Abhishek Verma", " a passionate developer."]}
-              typingSpeed={75}
-              pauseDuration={1500}
-              showCursor
-              cursorCharacter="|"
-              texts={["Welcome !", "Build some amazing experiences!"]}
-              deletingSpeed={50}
-              variableSpeedEnabled={false}
-              variableSpeedMin={60}
-              variableSpeedMax={120}
-              cursorBlinkDuration={0.5}
-            />
-          </div>
-        </div>
+    <section className="page about">
 
-        <div className="abt-desc">
-          <div className="desc-bg">
 
+      <div className="abt-desc">
+        <div className="desc-bg">
           <Hyperspeed
             effectOptions={{
               distortion: "turbulentDistortion",
@@ -80,10 +51,10 @@ const About = () => {
                 sticks: 242627,
               },
             }}
-            />
-          </div>
-          <div className="desc-cont">
-            <div className="desc-title">About me</div>
+          />
+        </div>
+        <div className="desc-cont">
+          <div className="desc-title">About me</div>
           <p>
             Passionate about technology and continuous improvement, I enjoy
             learning and adapting to new tools and platforms. I approach
@@ -92,10 +63,13 @@ const About = () => {
             learning and real-world experience. Always eager to grow, learn, and
             contribute.
           </p>
-          </div>
         </div>
+
+
       </div>
-  )
+
+    </section>
+  );
 }
 
 export default About
