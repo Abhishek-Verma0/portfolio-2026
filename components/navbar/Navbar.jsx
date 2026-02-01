@@ -1,3 +1,4 @@
+"use client"
 import "./navbar.css";
 import GradientText from "../GradientText";
 export default function Navbar() {
