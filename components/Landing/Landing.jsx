@@ -3,10 +3,12 @@ import "./landing.css"
 
 import Orb from "../Orb";
 import TextType from "../TextType";
+import Navbar from "../navbar/Navbar";
 
 const Landing = () => {
   return (
     <section className="page">
+      <Navbar/>
       <div
         className="orb-layer"
         style={{ width: "100%", height: "100vh", position: "absolute" }}

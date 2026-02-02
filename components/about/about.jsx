@@ -4,15 +4,15 @@ import "./about.css"
 
 
 
+import Magnet from '../Magnet'
 
 import Hyperspeed from "../Hyperspeed"; 
+import Skill from "../skills/Skill";
 
 
 const About = () => {
   return (
     <section className="page about">
-
-
       <div className="abt-desc">
         <div className="desc-bg">
           <Hyperspeed
@@ -53,21 +53,27 @@ const About = () => {
             }}
           />
         </div>
-        <div className="desc-cont">
-          <div className="desc-title">About me</div>
-          <p>
-            Passionate about technology and continuous improvement, I enjoy
-            learning and adapting to new tools and platforms. I approach
-            challenges with curiosity and a problem-solving mindset. Building
-            efficient and practical solutions motivates me. I value hands-on
-            learning and real-world experience. Always eager to grow, learn, and
-            contribute.
-          </p>
+        <div className="abt-cont">
+          <div className="desc-cont">
+            <div className="abt-head">
+              <Magnet padding={50} disabled={false} magnetStrength={50}>
+                <p>About</p>
+              </Magnet>
+            </div>
+
+            <div className="abt-text">
+
+            <p>
+              Passionate about technology and continuous improvement, I enjoy
+              learning and adapting to new tools and platforms. I value hands-on
+              learning and real-world experience. Always eager to grow, learn,
+              and contribute.
+            </p>
+            </div>
+          </div>
+          <Skill />
         </div>
-
-
       </div>
-
     </section>
   );
 }

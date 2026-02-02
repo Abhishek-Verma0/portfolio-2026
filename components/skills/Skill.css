@@ -1,5 +1,32 @@
 
+
+.skill-card{
+    
+    z-index: 6  ;
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    margin: 5rem 15rem 5rem 15rem;
+    flex-wrap: wrap;
+    
+}
+
 .custom-spotlight-card{
-    height: 50px;
-    width: 50px;
+    text-align: center;
+    width: 150px;
+    padding: 1rem   ;
+    margin: 2rem 2rem 2rem 2rem;
+
+}
+
+
+
+
+.sk-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 4rem;
 }
