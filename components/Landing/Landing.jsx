@@ -12,14 +12,14 @@ const Landing = () => {
       <div
         className="orb-layer"
         style={{ width: "100%", height: "100vh", position: "absolute" }}
-      >
+        >
         <Orb
           hoverIntensity={2}
           rotateOnHover
           hue={0}
           forceHoverState={false}
           backgroundColor="#000000"
-        />
+          />
       </div>
       <div className="content">
         
