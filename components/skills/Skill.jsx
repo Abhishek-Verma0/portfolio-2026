@@ -1,6 +1,6 @@
 "use client"
 import "./Skill.css"
-import Threads from "../Threads"
+
 import SpotlightCard from '../SpotlightCard';
 
 

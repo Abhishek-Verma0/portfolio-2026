@@ -3,7 +3,7 @@ import React from "react";
 
 import "./Project.css"
 
-import FloatingLines from "../FloatingLines";
+
 import TiltedCard from "../TiltedCard";
 
 

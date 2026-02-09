@@ -6,7 +6,7 @@ import "./about.css"
 
 import Magnet from '../Magnet'
 
-import Hyperspeed from "../Hyperspeed"; 
+
 import Skill from "../skills/Skill";
 
 
