@@ -5,7 +5,7 @@
 
 body{
   margin: 0px;
-  overflow: hidden; /* Hide scrollbars */
+
   /* cursor: wait; */
   background-color: black;
   font-family: "Press Start 2P", system-ui;
@@ -15,20 +15,7 @@ body{
 }
 
 
-.scroll-cont{
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
 
 
 
-.page {
-  position: relative;         
-  width: 100%;
-  height: 100vh;               
-  
-  scroll-snap-align: start;    
-  
-  overflow: hidden;            
-}
+

@@ -7,9 +7,9 @@ import SpotlightCard from '../SpotlightCard';
 let sk=["C","C++","Python","Javascript","Node","React Js","Next Js"]
 const Skill = () => {
   return (
-    <section className="pag">
+    <section className="pag" id="skill">
 
-        <div className="sk-title">Framework & Languages</div>
+        <div className="sk-title">Technologies & Languages</div>
       <div className="skill-card">
         {sk.map((element, index) => (
           <SpotlightCard

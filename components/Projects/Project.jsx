@@ -28,26 +28,13 @@ const project = [
 ];
 
 
-const mp = project.map((obj, idx) => {
-  
-})
+
 
 const Project = () => {
   return (
-    <div className="page">
-      <div style={{ width: "100%", height: "100vh", position: "absolute" }}>
-        <FloatingLines
-          enabledWaves={["top", "middle", "bottom"]}
-          // Array - specify line count per wave; Number - same count for all waves
-          lineCount={5}
-          // Array - specify line distance per wave; Number - same distance for all waves
-          lineDistance={5}
-          bendRadius={5}
-          bendStrength={-0.5}
-          interactive={true}
-          parallax={true}
-        />
-      </div>
+    <div className="page" id="project">
+
+      <h1 className="my-work"> My Work</h1>
 
       <div className="all-container">
         <div className="single-project">
