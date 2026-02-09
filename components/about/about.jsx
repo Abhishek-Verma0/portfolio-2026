@@ -35,7 +35,7 @@ const About = () => {
             </p>
             </div>
           </div>
-          <Skill />
+          
         </div>
       </div>
     </section>

@@ -1,11 +1,8 @@
 .navbar {
     position: fixed;
     top: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-  
-    width: 90%;
-    max-width: 1100px;
+
+    max-width: 80%;
     height: 64px;
   
     display: flex;
@@ -46,3 +43,9 @@
     color: white;
   }
   
+
+  .nav-cont{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }

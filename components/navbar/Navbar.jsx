@@ -1,8 +1,10 @@
 "use client"
 import "./navbar.css";
-import GradientText from "../GradientText";
+
 export default function Navbar() {
   return (
+    <div className="nav-cont">
+
     <nav className="navbar">
 
 
@@ -21,5 +23,6 @@ export default function Navbar() {
         </a>
       
     </nav>
+    </div>
   );
 }
