@@ -3,12 +3,12 @@ import "./landing.css"
 
 import Orb from "../Orb";
 import TextType from "../TextType";
-import Navbar from "../navbar/Navbar";
+
 
 const Landing = () => {
   return (
-    <section className="page">
-      <Navbar/>
+    <section className="land-page">
+      
       <div
         className="orb-layer"
         style={{ width: "100%", height: "100vh", position: "absolute" }}
@@ -25,7 +25,7 @@ const Landing = () => {
         
         <div className="intro-text">
           <TextType
-            text={["Hi..!", "I'm Abhishek Verma", " a passionate developer."]}
+            text={["Hi..!", "I'm Abhishek", "a passionate"," developer."]}
             typingSpeed={75}
             pauseDuration={1500}
             showCursor
@@ -36,6 +36,7 @@ const Landing = () => {
             variableSpeedMin={60}
             variableSpeedMax={120}
             cursorBlinkDuration={0.5}
+            
           />
         </div>
       </div>
