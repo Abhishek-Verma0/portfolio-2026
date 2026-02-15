@@ -4,40 +4,31 @@ import "./about.css"
 
 
 
-import Magnet from '../Magnet'
+import ScrambledText from "../ScrambledText"
 
 
-import Skill from "../skills/Skill";
-
-
+import { Component } from "../text-arc-effect";
 const About = () => {
   return (
-    <section className="page about" id="about">
-      <div className="abt-desc">
-        <div className="desc-bg">
+    <section className="page-about" id="about">
 
-        </div>
-        <div className="abt-cont">
-          <div className="desc-cont">
-            <div className="abt-head">
-              <Magnet padding={50} disabled={false} magnetStrength={50}>
-                <p>About</p>
-              </Magnet>
-            </div>
 
-            <div className="abt-text">
-
-            <p>
-              Passionate about technology and continuous improvement, I enjoy
-              learning and adapting to new tools and platforms. I value hands-on
-              learning and real-world experience. Always eager to grow, learn,
-              and contribute.
-            </p>
-            </div>
-          </div>
+   <Component />
+    
+      <p>
+        <ScrambledText
+  className="scrambled-text-demo"
+  radius={100}
+  duration={1.2}
+  speed={0.5}
+  scrambleChars=".:"
+        >
           
-        </div>
-      </div>
+I'm a curious developer with keen interest in Web Development and Machine Learning. As a good learner, I enjoy exploring new technologies, building practical projects, and continuously improving my skills through hands-on experience.
+</ScrambledText>
+   </p>
+
+
     </section>
   );
 }

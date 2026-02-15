@@ -1,49 +1,12 @@
 
-  .about{
+  .page-about{
     
     width: 100%;
-  }
-
-  /* about description */
-
-
-
-  .desc-bg{
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-  }
-
-  .abt-cont{
-
-
-    
-    position: relative;
-    z-index: 2;
-  
-    margin: 0 auto;
-  }
-
-  .desc-cont{
-
-    color: white;
-    font-size: 1rem;
+    height: 100vh;
     display: flex;
-    
-    justify-content: space-around;
-    margin: 10rem 10rem 10rem 10rem;
+    align-items: center;
+    justify-content: center;
 
   }
 
-
-
-  .abt-head{
-    width: 40%;
-    font-size: 1rem;
-   
-  }
-
-  .abt-text{
-    width: 60%;
-  }
 
