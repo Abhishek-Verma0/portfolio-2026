@@ -5,15 +5,16 @@ import "./about.css"
 
 
 import ScrambledText from "../ScrambledText"
+import TextArcEffect from "../text-arc-effect";
 
 
-import { Component } from "../text-arc-effect";
+
 const About = () => {
   return (
     <section className="page-about" id="about">
 
 
-   <Component />
+   <TextArcEffect />
     
       <p>
         <ScrambledText
