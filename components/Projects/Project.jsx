@@ -111,7 +111,7 @@ const Project = () => {
         {/* project 4 */}
         <div className="single-project">
           <a
-            href="github.com/Abhishek-Verma0/Fitness-Streak-Tracker"
+            href="https://github.com/Abhishek-Verma0/Fitness-Streak-Tracker"
             target="_blank"
           >
             <TiltedCard
