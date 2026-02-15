@@ -1,11 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-import "./Project.css"
-
+import "./Project.css";
 
 import TiltedCard from "../TiltedCard";
-
 
 const project = [
   {
@@ -13,7 +11,7 @@ const project = [
     github: "",
     img: "https://ik.imagekit.io/Mr01Wick/Secure-creds.png?updatedAt=1770091042475",
     altText: "secure-creds",
-    captionText:"Secure-Creds",
+    captionText: "Secure-Creds",
   },
   {
     name: "Artsy AI",
@@ -27,13 +25,30 @@ const project = [
   },
 ];
 
-
-
-
 const Project = () => {
+  const [cardDimensions, setCardDimensions] = useState({
+    width: "280px",
+    height: "280px",
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setCardDimensions({ width: "280px", height: "280px" });
+      } else if (window.innerWidth < 1024) {
+        setCardDimensions({ width: "350px", height: "280px" });
+      } else {
+        setCardDimensions({ width: "500px", height: "300px" });
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="page" id="project">
-
       <h1 className="my-work"> My Work</h1>
 
       <div className="all-container">
@@ -43,10 +58,10 @@ const Project = () => {
               imageSrc="https://ik.imagekit.io/Mr01Wick/Artsy.png?updatedAt=1770091043312"
               altText="Artsy AI"
               captionText="Artsy"
-              containerHeight="300px"
-              containerWidth="500px"
-              imageHeight="300px"
-              imageWidth="500px"
+              containerHeight={cardDimensions.height}
+              containerWidth={cardDimensions.width}
+              imageHeight={cardDimensions.height}
+              imageWidth={cardDimensions.width}
               rotateAmplitude={12}
               scaleOnHover={1.05}
               showMobileWarning={false}
@@ -66,10 +81,10 @@ const Project = () => {
               imageSrc="https://ik.imagekit.io/Mr01Wick/Secure-creds.png?updatedAt=1770091043312"
               altText="Secure-Creds"
               captionText="Secure-Creds"
-              containerHeight="300px"
-              containerWidth="500px"
-              imageHeight="300px"
-              imageWidth="500px"
+              containerHeight={cardDimensions.height}
+              containerWidth={cardDimensions.width}
+              imageHeight={cardDimensions.height}
+              imageWidth={cardDimensions.width}
               rotateAmplitude={12}
               scaleOnHover={1.05}
               showMobileWarning={false}
@@ -92,10 +107,10 @@ const Project = () => {
               imageSrc="https://ik.imagekit.io/Mr01Wick/classic-snake.jpg"
               altText="Classic-Snake"
               captionText="Classic-Snake"
-              containerHeight="300px"
-              containerWidth="500px"
-              imageHeight="300px"
-              imageWidth="500px"
+              containerHeight={cardDimensions.height}
+              containerWidth={cardDimensions.width}
+              imageHeight={cardDimensions.height}
+              imageWidth={cardDimensions.width}
               rotateAmplitude={12}
               scaleOnHover={1.05}
               showMobileWarning={false}
@@ -118,10 +133,10 @@ const Project = () => {
               imageSrc="https://ik.imagekit.io/Mr01Wick/streak.webp"
               altText="Fitness-streak"
               captionText="Fitness-Streak"
-              containerHeight="300px"
-              containerWidth="500px"
-              imageHeight="300px"
-              imageWidth="500px"
+              containerHeight={cardDimensions.height}
+              containerWidth={cardDimensions.width}
+              imageHeight={cardDimensions.height}
+              imageWidth={cardDimensions.width}
               rotateAmplitude={12}
               scaleOnHover={1.05}
               showMobileWarning={false}
