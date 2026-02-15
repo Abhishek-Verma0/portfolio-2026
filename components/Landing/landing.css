@@ -1,32 +1,65 @@
-.orb-layer {
-    position: absolute;
-    inset: 0;
-    z-index: 5;
-    margin-top: 2rem;
-  }
-  
+/* Landing Page Professional Styling */
+.land-page {
+  margin-top: 0;
+  position: relative;
+  overflow: hidden;
+}
 
-  
-  .content{
-    z-index: 2;
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-   
+.orb-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  margin-top: 0;
+  opacity: 0.95;
+}
+
+.content {
+  z-index: 20;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  font-size: 2rem;
+  word-wrap: break-word;
+  animation: fadeInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+/* Animation Definitions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
   }
-  
-  .intro-text{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex: 1;
-    font-size: 2rem;
-    word-wrap: wrap;
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .land-page{
-    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro-text {
+    font-size: 1.5rem;
+    padding: 0 20px;
   }
+}
+
+@media (max-width: 480px) {
+  .intro-text {
+    font-size: 1.2rem;
+    padding: 0 16px;
+  }
+}
