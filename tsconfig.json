@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "components/text-arc-effect.jsx"  ],
   "exclude": ["node_modules"]
 }
