@@ -1,12 +1,74 @@
+.about-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
 
-  .page-about{
-    
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.about-container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
 
+/* Arc wrapper */
+.about-arc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text block */
+.about-text {
+  width: 100%;
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  color: #334155; /* slate-700 */
+  margin-bottom: 5rem;
+}
+
+/* Dark mode support */
+.dark .about-text {
+  color: #e2e8f0;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .about-container {
+    gap: 4rem;
   }
 
+  .about-text {
+    font-size: 1.2rem;
+    margin-bottom: 5rem;
+  }
+}
 
+/* Desktop */
+@media (min-width: 1024px) {
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  .about-arc {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .about-text {
+    flex: 1;
+    text-align: left;
+    font-size: 1.25rem;
+  }
+}
