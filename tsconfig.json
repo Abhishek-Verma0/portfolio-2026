@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "components/text-arc-effect.jsx"  ],
+, "components/text-arc-effect.jsx", "components/dotted-surface.jsx"  ],
   "exclude": ["node_modules"]
 }
