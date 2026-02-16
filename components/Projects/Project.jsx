@@ -48,7 +48,7 @@ const Project = () => {
   }, []);
 
   return (
-    <div className="page" id="project">
+    <div className="proj-page" id="project">
       <h1 className="my-work"> My Work</h1>
 
       <div className="all-container">

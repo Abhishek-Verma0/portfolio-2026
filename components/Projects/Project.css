@@ -1,69 +1,84 @@
+/* Reset box sizing for stability */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Page section */
+.proj-page {
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+}
+
+/* Title */
+.my-work {
+  text-align: center;
+  margin: 3rem 0 1.5rem 0;
+  font-size: 2.8rem;
+}
+
+/* Projects container */
 .all-container {
-  margin: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  /* max-width: 1400px; */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;     /* important: no space-around */
+  align-items: center;
+  gap: 2rem;                   /* spacing between cards */
+}
+
+/* Each project wrapper */
+.single-project {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
 
-  /* Tablet */
-  @media (min-width: 768px) {
-    margin: 2rem 2rem;
-    gap: 2.5rem;
-  }
-
-  /* Desktop */
-  @media (min-width: 1024px) {
-    margin: 5rem 5rem 5rem 5rem;
-    justify-content: space-around;
-    gap: 3rem;
-  }
+  flex: 1 1 300px;             /* base size */
+  max-width: 500px;
 }
 
+/* Links */
 a {
   text-decoration: none;
-  color: #ffff;
+  color: #fff;
 }
 
-.my-work {
-  text-align: center;
-  margin: 2rem 0 0 0;
-  font-size: 1.5rem;
+/* ============================= */
+/* Responsive (match JS exactly) */
+/* JS: <768, <1024, >=1024       */
+/* ============================= */
 
-  /* Tablet */
-  @media (min-width: 768px) {
-    margin: 3rem 0 0 0;
+/* Mobile: 0–767px */
+@media (max-width: 767px) {
+  .my-work {
     font-size: 2rem;
   }
 
-  /* Desktop */
-  @media (min-width: 1024px) {
-    margin: 4rem 0 0 0;
-    font-size: 2.5rem;
+  .all-container {
+    gap: 1.5rem;
+  }
+
+  .single-project {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 
-.page {
-  position: relative;
-  margin-bottom: 2rem;
-
-  /* Tablet */
-  @media (min-width: 768px) {
-    margin-bottom: 3rem;
-  }
-
-  /* Desktop */
-  @media (min-width: 1024px) {
-    margin-bottom: 5rem;
+/* Tablet: 768–1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .single-project {
+    flex: 1 1 45%;
   }
 }
 
-.single-project {
-  width: 100%;
-  max-width: 500px;
-
-  /* Tablet */
-  @media (min-width: 768px) {
-    width: auto;
+/* Desktop: 1024px+ */
+@media (min-width: 1024px) {
+  .single-project {
+    flex: 1 1 30%;
   }
 }
