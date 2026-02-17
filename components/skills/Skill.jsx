@@ -11,7 +11,7 @@ const Skill = () => {
   };
 
   return (
-    <div className="min-h-screen p-4 sm:p-8 lg:p-12">
+    <div id="skill" className="min-h-screen p-4 sm:p-8 lg:p-12">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-12 sm:mb-16 animate-fade-in-up">
