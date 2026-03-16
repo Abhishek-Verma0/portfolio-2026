@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 
 const Skill = () => {
   const skills = {
+    "Languages & Core": ["C / C++", "Python", "JavaScript", "SDL Graphics"],
     "Front-End": ["ReactJs", "Next.js", "Tailwind", "Framer Motion"],
-    "Back-End": ["NodeJs", "Express", "Clerk", "SQL"],
+    "Back-End": ["NodeJs", "Express", "MongoDB", "SQL"],
     "AI & Data": ["Python", "TensorFlow", "Pandas", "NumPy"],
   };
 
