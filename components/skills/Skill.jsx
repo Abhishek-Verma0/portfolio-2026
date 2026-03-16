@@ -1,71 +1,51 @@
 "use client";
 import React from "react";
-import TrueFocus from "../true-focus/TrueFocus";
-import "./Skill.css"
+import "./Skill.css";
+import { motion } from "framer-motion";
 
 const Skill = () => {
   const skills = {
-    Languages: ["C++", "C", "Python", "JavaScript"],
-    Frameworks: ["ReactJs", "NodeJs", "Express", "TensorFlow", "PyTorch","Tailwind"],
-    Tools: ["NumPy", "Pandas","Git","GitHub","Vercel","Clerk"],
+    "Front-End": ["ReactJs", "Next.js", "Tailwind", "Framer Motion"],
+    "Back-End": ["NodeJs", "Express", "Clerk", "SQL"],
+    "AI & Data": ["Python", "TensorFlow", "Pandas", "NumPy"],
   };
 
   return (
-    <div id="skill" className="min-h-screen p-4 sm:p-8 lg:p-12">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="mb-12 sm:mb-16 animate-fade-in-up">
-          <div className="inline-block">
-            <TrueFocus
-              sentence="Tech Stack"
-              manualMode={false}
-              blurAmount={5}
-              borderColor="#5227FF"
-              animationDuration={0.5}
-              pauseBetweenAnimations={1}
-            />
-          </div>
+    <section id="skill" className="skills-v2">
+      <div className="section-container">
+        <header className="skills-header">
+          <div className="about-section-label">02 / EXPERTISE</div>
+          <h2 className="skills-heading">
+            TECHNICAL <span className="text-gradient">CAPABILITIES</span>
+          </h2>
+        </header>
 
-          <p
-            className="text-slate-400 mt-3 text-sm sm:text-base animate-slide-in-left"
-            style={{ animationDelay: "0.1s" }}
-          >
-            Explore the technologies and tools I use to build amazing products
-          </p>
-        </div>
-
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {Object.entries(skills).map(([category, items], categoryIndex) => (
-            <div
+        <div className="skills-grid-v2">
+          {Object.entries(skills).map(([category, items], idx) => (
+            <motion.div
               key={category}
-              className="skill-card p-6 sm:p-8 animate-fade-in-up"
-              style={{ animationDelay: `${categoryIndex * 0.1}s` }}
+              className="holographic-card skill-card-v2"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, duration: 0.8 }}
             >
-              {/* Category Title */}
-              <h3 className="text-lg sm:text-xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
-                {category}
-              </h3>
-
-              {/* Skill Badges */}
-              <div className="flex flex-wrap gap-3 sm:gap-4">
-                {items.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="skill-badge px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-medium"
-                    style={{
-                      animationDelay: `${categoryIndex * 0.15 + index * 0.05}s`,
-                    }}
-                  >
+              <h3 className="skill-cat-title">{category}</h3>
+              <div className="skill-item-row">
+                {items.map((skill, i) => (
+                  <span key={i} className="skill-item-badge">
                     {skill}
-                  </div>
+                  </span>
                 ))}
               </div>
-            </div>
+              
+              {/* Subtle mesh localized to card */}
+              <div className="skill-card-mesh"></div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

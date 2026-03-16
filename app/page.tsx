@@ -13,24 +13,22 @@ import Preloader from "../components/Preloader/Preloader";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const scrollRef = useRef(null);
 
   useEffect(() => {
-    let locomotiveScroll: any;
+    let locomotiveScroll: InstanceType<Awaited<typeof import("locomotive-scroll")>["default"]>;
 
     const init = async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
-      // Wait for preloader animation
+      // Wait for preloader animation, then smooth scroll
       setTimeout(() => {
         setIsLoading(false);
         document.body.style.cursor = "default";
         window.scrollTo(0, 0);
 
-        // Initialize smooth scroll AFTER loading
-        locomotiveScroll = new LocomotiveScroll({
-          el:scrollRef.current as any,
-          smooth: true,
-        }as any);
+        
+        locomotiveScroll = new LocomotiveScroll();
       }, 2000);
     };
 
@@ -40,7 +38,6 @@ export default function Home() {
       locomotiveScroll?.destroy();
     };
   }, []);
-  const scrollRef = useRef(null);
 
 
   return (

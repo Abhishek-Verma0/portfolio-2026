@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "My Portfolio",
+  title: "Abhishek Verma | Developer Portfolio",
+  description:
+    "Portfolio of Abhishek Verma — a passionate developer specialising in Web Development and Machine Learning. Explore projects, skills, and more.",
 };
 
 export default function RootLayout({

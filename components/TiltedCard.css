@@ -35,17 +35,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 15px;
   will-change: transform;
   transform: translateZ(0);
- 
 }
 
 .tilted-card-overlay {
   position: absolute;
-  top: 0;
-  left: 1.8rem;
+  inset: 0;
   z-index: 2;
   will-change: transform;
   transform: translateZ(30px);
